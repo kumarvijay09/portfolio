@@ -1,0 +1,458 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white; 
+    
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+  background-color: black;
+  
+}
+
+/****************************************************Navbar*********************************************/
+nav{
+    height:80px;
+    width:100%;
+    background-color: rgb(37, 37, 37);
+    /* color:white; */
+    line-height: 80px;
+    display:flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0px;
+}
+#nav-logo a{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-left: 10px;
+    /* color:white; */
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    margin-right: 60px;
+    line-height: 80px;
+    text-decoration: none; 
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+nav ul li a:hover,.active{
+    background-color:whitesmoke;
+    color:black;
+    transition: all 0.5s ease;
+}
+
+.menu-btn{
+    line-height: 80px;
+    margin-right:30px;
+    font-size: 1.5rem;
+    display:none;    
+}
+
+#click{
+   display:none;
+}
+
+
+@media(max-width:720px){
+  nav ul{
+    display:block;
+    margin-top: 80px;
+    background-color: rgb(84, 82, 82);
+    height:60vh;
+    width:100%;
+    position:fixed;
+    text-align: center; 
+    transition: all 0.7s ease;
+    left:-100%;
+} 
+nav ul li a{
+    margin-right: 0px;
+}  
+
+
+#click:checked ~ ul{
+    left:0%;
+}
+.menu-btn{
+    display:block;
+}
+#nav-logo a{
+    font-size:2rem;
+}
+}
+
+
+/*************************************************Home Section*******************************************/
+.home{
+    height:80vh;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 80px 20px 60px;
+ 
+}
+
+.home-img img{
+    height:400px;
+    width:400px;
+    border-radius: 50%;
+    border:5px solid black;
+}
+
+.home-content{
+    font-size: 2rem;
+}
+span{
+    color:aqua;
+    
+}
+
+.btn{
+    font-size: 1rem;
+    margin-top:15px;
+    padding:10px;
+    border-radius: 10px;
+    border:1px solid aqua;
+   
+    background-color:transparent;
+    cursor:pointer;
+}
+ h3{
+    color:aqua;
+    font-size: 2rem;
+    text-align: end;
+    margin-right: 80px;
+}
+#Home_social{
+    display: flex;
+    margin-right: 20px;
+    justify-content:right;
+    align-items: top;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+@media(max-width:720px){
+    .home-img img{
+        height:300px;
+        width:300px;
+    }
+
+    .btn{
+        font-size: 0.6rem;
+    }   
+    .home-content{
+        font-size: 1.2rem;
+        padding: 0px 0px 0px 10px;
+    }
+    
+    h3{
+        font-size:1.5rem;
+    
+    }
+    #Home_social{
+        font-size: 1.5rem;
+    }
+}
+
+/*----------------------------------------------About Section-------------------------------------------*/
+
+.about-container{
+    height:100vh;
+    width:100%;
+    /* border:2px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* color:white; */
+    padding-top:80px;
+    
+}
+
+#about-text{
+           height:300px;
+           width:400px;
+           box-shadow: 10px 5px 5px aqua;
+           border:1px solid aqua; 
+           padding:40px;
+}
+#about-image{
+    height: 380px;
+    width:400px;
+    
+    /* border:2px solid white;  */
+
+}
+
+#about-image img{
+    height: 100%;
+    width:100%;
+    
+}
+
+@media(max-width:720px){
+    .about-container{
+        height:100vh;
+        width:100%;
+    }
+
+    #about-text{
+        height:300px;
+        width:400px;
+        padding:40px;
+       
+    }
+    #about-image{
+        height: 400px;
+        width:400px;
+    }
+   
+}
+
+    
+
+/*-------------------------------------------Skills Section---------------------------------------------*/
+
+
+    .skill-container{
+        height:100vh;
+        width:100%;
+        padding-top:80px;
+        /* border:2px solid white; */
+
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        /* color:white; */
+       
+    }
+
+    #tech-container{
+                height: 400px;
+                width:450px;
+                /* border: 2px solid white; */
+    }
+    
+    #professional-container{
+        height: 400px;
+        width:450px;
+        /* border: 2px solid white; */
+    } 
+    
+    .box-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .box{
+        height:3em;
+        width:95%;
+        /* background-color: antiquewhite; */
+        
+    }
+    
+    .inner-box{
+        height:10px;
+        width:100%;
+        border-radius: 10px;
+        background-color:  rgb(79, 79, 79);
+        margin:5px;
+    }
+    
+    .box-1{
+        height:10px;
+        width:81%;
+        background-color:aqua;
+    }
+    .box-2{
+        height:10px;
+        width:72%;
+        background-color: aqua;
+    }
+    .box-3{
+        height:10px;
+        width:45%;
+        background-color: aqua;
+    }
+    
+    .box-4{
+        height:10px;
+        width:76.5%;
+        background-color: aqua;
+    
+    }
+    
+    .box-5{
+      height:10px;
+      width:58.5%;
+      background-color: aqua;
+    }
+    
+    
+    .box-6{
+        height:10px;
+        width:63%;
+        background-color: aqua;
+    }
+    .box-7{
+        height:10px;
+        width:49.5%;
+        background-color: aqua;
+    }
+    
+    
+    .prof-box-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    
+    }
+    .prof-box{
+        height:150px;
+        width:150px;
+        padding: 5px;
+        border-radius: 50%;
+        border: 15px solid aqua;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top:20px;
+    }
+    @media(max-width:720px){
+        .skill-container{
+            flex-direction: column;
+        }
+        #tech-container{
+            height: 400px;
+            width:400px;
+             /* border: 2px solid white;   */
+        }
+
+         #professional-container{
+             height: 400px;
+             width:400px;
+             /* border: 2px solid white;   */
+         } 
+
+         .prof-box{
+            height: 140px;
+            width:140px;
+            /* border:10px solid aqua; */
+         }
+ }
+      
+
+
+   /* --------------------------------------Project Section-------------------------------------------- */
+
+.projects-container{
+    height: 100vh;
+    width:100%;
+    padding-top: 100px;
+    
+}
+
+
+
+.projects-container .project h3{
+    /* color:white; */
+    font-size: 1rem; 
+}
+.projects-container .project img{
+    height:210px;
+    width:200px;
+}
+.projects-container{
+    margin-top: 50px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.projects-container .project{
+    border: 2px solid aqua;
+    padding:5px;
+    height:250px;
+    width:215px;
+}
+
+
+@media(max-width:720px){
+    .projects-container .project h3{
+        font-size: 0.6rem;
+    }   
+    .projects-container .project{
+        height: 160px;
+        width:160px;
+        padding:5px;
+        margin-top: 5px;
+    }
+    .projects-container .project img{
+        height:110px;
+        width:145px;
+    }
+}
+
+
+/* ------------------------------------------Contact Section------------------------------------------- */
+
+.contact-container{
+    height: 80vh;
+    width:100%;
+    padding-top:50px;
+}
+.contact-container input{
+    background-color: black;
+    border:2px solid aqua;
+    color:rgb(104, 103, 103);
+    height:25px;
+    width:70%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.contact-container h3{
+    text-align: center;
+    color:aqua
+}
+.contact-container{
+    text-align: center;
+}
+.contact-container textarea{
+    background-color: black;
+    height:100px;
+    width: 70%;
+    border: 2px solid aqua;
+}
+.contact-container button{
+    height: 30px;
+    width:100px;
+    border: 2px solid aqua;
+    background-color: black;
+    color:aqua ;
+    font-weight:bold;
+ }
+
+ /* ***********************************Footer Section***************************** */
+ footer{
+    height:50px;
+    width:100%;
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+
+ }
