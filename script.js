@@ -328,22 +328,41 @@ function initContactForm() {
   const submitBtn = document.getElementById('submitBtn');
   if (!form || !submitBtn) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const nameInput = document.getElementById('name');
+    const senderName = nameInput ? nameInput.value.trim() : 'friend';
     const originalContent = submitBtn.innerHTML;
+
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
 
-    // Simulate sending delay
-    setTimeout(() => {
-      const name = document.getElementById('name').value.trim();
-      form.reset();
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/kumarvijay90060@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (response.ok) {
+        form.reset();
+        showToast(`Thank you, ${senderName}! Your message was sent directly to Vijay's email.`, 'success');
+      } else {
+        const data = await response.json().catch(() => ({}));
+        showToast(data.message || 'Something went wrong. Please email directly to kumarvijay90060@gmail.com', 'error');
+      }
+    } catch (err) {
+      console.error('Contact form submission error:', err);
+      showToast('Network error. You can email directly at kumarvijay90060@gmail.com', 'error');
+    } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalContent;
-
-      showToast(`Thank you, ${name || 'friend'}! Your message was sent successfully.`, 'success');
-    }, 1200);
+    }
   });
 }
 
