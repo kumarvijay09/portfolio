@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vijay Kumar Saw | Frontend Developer &amp; Programmer</title>
+    <meta name="description" content="Portfolio of Vijay Kumar Saw - Frontend Developer passionate about building interactive, modern, and user-friendly web applications." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Devicon Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Top Reading Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Ambient Glowing Background Orbs -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="#home" class="nav-brand">
+          <span class="code-bracket">&lt;</span>Vijay<span class="brand-dot">.dev</span><span class="code-bracket">/&gt;</span>
+        </a>
+
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-action">
+            <a href="assets/docs/Vijay_Resume.pdf" download="Vijay_Kumar_Resume.pdf" class="btn btn-outline btn-sm">
+              <i class="fa-solid fa-file-arrow-down"></i> Resume
+            </a>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay Backdrop -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <main>
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="hero-section" id="home">
+        <div class="container hero-container">
+          <div class="hero-content reveal">
+            <div class="status-badge">
+              <span class="pulse-dot"></span>
+              Available for Opportunities
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Vijay Kumar Saw</span>
+            </h1>
+
+            <div class="typewriter-box">
+              <span class="static-txt">And I'm a </span>
+              <span class="typed-text"></span>
+            </div>
+
+            <p class="hero-description">
+              Passionate Frontend Developer dedicated to crafting beautiful, high-performance,
+              and responsive web experiences. Eager to solve real-world problems through clean code.
+            </p>
+
+            <div class="hero-cta">
+              <a href="assets/docs/Vijay_Resume.pdf" download="Vijay_Kumar_Resume.pdf" class="btn btn-primary">
+                <i class="fa-solid fa-download"></i> Download CV
+              </a>
+              <a href="#contact" class="btn btn-glass">
+                <i class="fa-solid fa-paper-plane"></i> Hire Me
+              </a>
+            </div>
+
+            <div class="social-wrapper">
+              <span class="social-label">Connect with me:</span>
+              <div class="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/vijay-kumar-saw-724925253"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  class="social-btn"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://github.com/kumarvijay09"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  class="social-btn"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  href="https://leetcode.com/Kumarvijay07/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LeetCode"
+                  class="social-btn"
+                >
+                  <i class="fa-solid fa-code"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/_itskumarvijay/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  class="social-btn"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="avatar-card" data-tilt>
+              <div class="avatar-glow"></div>
+              <div class="avatar-frame">
+                <img src="assets/images/profile_image.jpg" alt="Vijay Kumar Saw - Profile Picture" />
+              </div>
+              <div class="floating-pill pill-tech">
+                <i class="fa-brands fa-react"></i>
+                <span>Frontend Explorer</span>
+              </div>
+              <div class="floating-pill pill-code">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Clean Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-down-indicator" aria-label="Scroll down to About section">
+          <span class="mouse">
+            <span class="wheel"></span>
+          </span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </section>
+
+      <!-- ==================== ABOUT SECTION ==================== -->
+      <section class="section about-section" id="about">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag"><i class="fa-regular fa-user"></i> GET TO KNOW ME</span>
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <p class="section-subtitle">A brief glimpse into who I am, my passions, and my journey.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-visual reveal">
+              <div class="about-image-card" data-tilt>
+                <img src="assets/images/aboutImage.jpg" alt="Vijay Kumar Saw working on development" />
+                <div class="about-overlay-badge">
+                  <i class="fa-solid fa-award"></i>
+                  <div>
+                    <h4>Enthusiastic Learner</h4>
+                    <p>Always expanding technical horizons</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-info reveal">
+              <h3 class="about-heading">
+                Transforming ideas into interactive, modern web experiences.
+              </h3>
+              <p class="about-text">
+                I'm a dedicated <strong>Frontend Developer</strong> skilled in HTML5, CSS3, and modern JavaScript. I specialize in crafting responsive, accessible web interfaces that deliver intuitive and enjoyable user experiences.
+              </p>
+              <p class="about-text">
+                Beyond UI design, I practice algorithmic problem-solving on LeetCode and build foundations in C, Python, Java, and MySQL. Always eager to innovate and contribute to high-impact teams.
+              </p>
+
+              <!-- Quick Highlights / Stats -->
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <div class="stat-number">4<span class="gradient-text">+</span></div>
+                  <div class="stat-title">Projects Built</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">100<span class="gradient-text">+</span></div>
+                  <div class="stat-title">LeetCode Solved</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">7<span class="gradient-text">+</span></div>
+                  <div class="stat-title">Core Skills</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">100<span class="gradient-text">%</span></div>
+                  <div class="stat-title">Dedication</div>
+                </div>
+              </div>
+
+              <div class="about-action">
+                <a href="mailto:kumarvijay90060@gmail.com" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-envelope"></i> Let's Talk
+                </a>
+                <a href="#projects" class="btn btn-outline btn-sm">
+                  <i class="fa-solid fa-briefcase"></i> View Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SKILLS SECTION ==================== -->
+      <section class="section skills-section" id="skills">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag"><i class="fa-solid fa-bolt"></i> CAPABILITIES</span>
+            <h2 class="section-title">Technical &amp; <span class="gradient-text">Soft Skills</span></h2>
+            <p class="section-subtitle">Technologies, frameworks, and competencies I work with.</p>
+          </div>
+
+          <div class="skills-wrapper">
+            <!-- Technical Skills Category -->
+            <div class="skills-category-card reveal">
+              <div class="category-header">
+                <div class="cat-icon-box"><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <h3 class="cat-title">Technical Proficiency</h3>
+                  <p class="cat-desc">Core web technologies and programming languages</p>
+                </div>
+              </div>
+
+              <div class="skills-bars-container">
+                <!-- HTML5 -->
+                <div class="skill-bar-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" data-progress="90"></div>
+                  </div>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="skill-bar-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="devicon-css3-plain colored"></i> CSS3 / Modern Flex &amp; Grid</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" data-progress="85"></div>
+                  </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-bar-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript (ES6+)</span>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" data-progress="75"></div>
+                  </div>
+                </div>
+
+                <!-- C Language -->
+                <div class="skill-bar-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="devicon-c-plain colored"></i> C Programming</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" data-progress="85"></div>
+                  </div>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-bar-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="devicon-python-plain colored"></i> Python</span>
+                    <span class="skill-percent">70%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" data-progress="70"></div>
+                  </div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="skill-bar-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" data-progress="65"></div>
+                  </div>
+                </div>
+
+                <!-- Java -->
+                <div class="skill-bar-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="devicon-java-plain colored"></i> Java</span>
+                    <span class="skill-percent">60%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" data-progress="60"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Skills Category -->
+            <div class="skills-category-card reveal">
+              <div class="category-header">
+                <div class="cat-icon-box"><i class="fa-solid fa-brain"></i></div>
+                <div>
+                  <h3 class="cat-title">Professional Competencies</h3>
+                  <p class="cat-desc">Key qualities that strengthen development and teamwork</p>
+                </div>
+              </div>
+
+              <div class="soft-skills-grid">
+                <div class="soft-skill-card" data-tilt>
+                  <div class="soft-icon"><i class="fa-solid fa-users"></i></div>
+                  <h4>Team Collaboration</h4>
+                  <p>Cooperating effectively within multidisciplinary groups to achieve common targets.</p>
+                </div>
+
+                <div class="soft-skill-card" data-tilt>
+                  <div class="soft-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                  <h4>Critical Thinking</h4>
+                  <p>Analyzing problem vectors objectively to formulate streamlined architectures.</p>
+                </div>
+
+                <div class="soft-skill-card" data-tilt>
+                  <div class="soft-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                  <h4>Problem Solving</h4>
+                  <p>Breaking down complex algorithmic challenges into modular, efficient solutions.</p>
+                </div>
+
+                <div class="soft-skill-card" data-tilt>
+                  <div class="soft-icon"><i class="fa-solid fa-comments"></i></div>
+                  <h4>Communication Skills</h4>
+                  <p>Articulating technical concepts clearly, actively listening, and sharing feedback.</p>
+                </div>
+              </div>
+
+              <!-- Tools Badges -->
+              <div class="tools-badges-wrap">
+                <h4 class="tools-heading">Tools &amp; Workflow:</h4>
+                <div class="badge-list">
+                  <span class="tool-badge"><i class="devicon-git-plain colored"></i> Git</span>
+                  <span class="tool-badge"><i class="devicon-github-original"></i> GitHub</span>
+                  <span class="tool-badge"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                  <span class="tool-badge"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROJECTS SECTION ==================== -->
+      <section class="section projects-section" id="projects">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> MY WORK</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-subtitle">Realized applications demonstrating design, structure, and interactivity.</p>
+          </div>
+
+          <!-- Project Filter Controls -->
+          <div class="project-filter-bar reveal">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Websites</button>
+            <button class="filter-btn" data-filter="game">Games &amp; Logic</button>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1: School Website (SBPS) -->
+            <div class="project-card reveal" data-category="web" data-tilt>
+              <div class="project-image-box">
+                <img src="assets/images/schoolWebsite.webp" alt="Sarala Birla Public School Website" />
+                <div class="project-overlay">
+                  <a href="https://github.com/kumarvijay09/schoolWebsite" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="View Source"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://kumarvijay09.github.io/schoolWebsite/" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tag-row">
+                  <span class="project-badge">Institutional Web</span>
+                </div>
+                <h3 class="project-title">School Website (SBPS)</h3>
+                <p class="project-desc">
+                  Responsive institutional website for Sarala Birla Public School featuring dynamic campus photo gallery, infrastructure highlights, notices, and contact info.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-pill">HTML5</span>
+                  <span class="tech-pill">CSS3</span>
+                  <span class="tech-pill">Responsive UI</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kumarvijay09/schoolWebsite" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://kumarvijay09.github.io/schoolWebsite/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Rock Paper Scissors Game -->
+            <div class="project-card reveal" data-category="game" data-tilt>
+              <div class="project-image-box">
+                <img src="assets/images/RockPapperScissor.png" alt="Rock Paper Scissors Game" />
+                <div class="project-overlay">
+                  <a href="https://github.com/kumarvijay09/RockPaperScissor" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="View Source"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://kumarvijay09.github.io/RockPaperScissor/" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tag-row">
+                  <span class="project-badge">Interactive Game</span>
+                </div>
+                <h3 class="project-title">Rock Paper Scissors Game</h3>
+                <p class="project-desc">
+                  Interactive browser game featuring randomized computer AI decisions, real-time score keeping, animated combat feedback, and instant round resets.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-pill">HTML5</span>
+                  <span class="tech-pill">CSS3</span>
+                  <span class="tech-pill">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kumarvijay09/RockPaperScissor" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://kumarvijay09.github.io/RockPaperScissor/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Tic Tac Toe Game -->
+            <div class="project-card reveal" data-category="game" data-tilt>
+              <div class="project-image-box">
+                <img src="assets/images/TicTacToe.jpeg" alt="Tic Tac Toe Game" />
+                <div class="project-overlay">
+                  <a href="https://github.com/kumarvijay09/TicTacToe" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="View Source"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://kumarvijay09.github.io/TicTacToe/" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tag-row">
+                  <span class="project-badge">Classic Game</span>
+                </div>
+                <h3 class="project-title">Tic Tac Toe Game</h3>
+                <p class="project-desc">
+                  Classic 2-player board game with dynamic turn switching, intelligent win-condition verification algorithms, tie-game alerts, and clean resets.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-pill">HTML5</span>
+                  <span class="tech-pill">CSS3</span>
+                  <span class="tech-pill">Game Logic</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kumarvijay09/TicTacToe" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://kumarvijay09.github.io/TicTacToe/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CONTACT SECTION ==================== -->
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> REACH OUT</span>
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="section-subtitle">Have a project, opportunity, or simply want to say hello? Drop a line below!</p>
+          </div>
+
+          <div class="contact-wrapper">
+            <!-- Contact Info Cards -->
+            <div class="contact-cards-col reveal">
+              <div class="contact-item-card">
+                <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                <div class="item-text">
+                  <h4>Email Me</h4>
+                  <a href="mailto:kumarvijay90060@gmail.com">kumarvijay90060@gmail.com</a>
+                </div>
+                <button class="copy-btn" id="copyEmailBtn" title="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="item-text">
+                  <h4>Location</h4>
+                  <p>Jharkhand, India</p>
+                </div>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="icon-circle"><i class="fa-solid fa-code-branch"></i></div>
+                <div class="item-text">
+                  <h4>Profiles</h4>
+                  <p>GitHub &bull; LinkedIn &bull; LeetCode</p>
+                </div>
+              </div>
+
+              <!-- Mini social connect box -->
+              <div class="contact-social-box">
+                <h4>Follow My Journey</h4>
+                <div class="social-icons">
+                  <a href="https://www.linkedin.com/in/vijay-kumar-saw-724925253" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://github.com/kumarvijay09" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="https://leetcode.com/Kumarvijay07/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LeetCode">
+                    <i class="fa-solid fa-code"></i>
+                  </a>
+                  <a href="https://www.instagram.com/_itskumarvijay/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-col reveal">
+              <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <div class="input-wrap">
+                      <i class="fa-regular fa-user input-icon"></i>
+                      <input type="text" id="name" name="name" placeholder="John Doe" required />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <div class="input-wrap">
+                      <i class="fa-regular fa-envelope input-icon"></i>
+                      <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <div class="input-wrap">
+                    <i class="fa-regular fa-bookmark input-icon"></i>
+                    <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <div class="input-wrap">
+                    <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
+                    <textarea id="message" name="message" rows="5" placeholder="Hi Vijay, I'd like to discuss a project..." required></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-top">
+          <a href="#home" class="footer-brand">
+            <span class="code-bracket">&lt;</span>Vijay<span class="brand-dot">.dev</span><span class="code-bracket">/&gt;</span>
+          </a>
+          <ul class="footer-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Vijay Kumar Saw. Built with passion, clean code &amp; modern web standards.</p>
+          <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification Banner -->
+    <div id="toast" class="toast">
+      <i class="toast-icon fa-solid fa-circle-check"></i>
+      <span class="toast-message">Message copied!</span>
+    </div>
+
+    <!-- External Script Dependencies for Smooth Animations -->
+    <!-- Typed.js for dynamic typing text -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Vanilla Tilt for interactive 3D card tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>
