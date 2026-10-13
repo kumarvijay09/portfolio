@@ -5,9 +5,13 @@
  * VanillaTilt 3D Cards, Toast Notifications & Contact Handler.
  */
 
+let lenis = null;
+
 document.addEventListener('DOMContentLoaded', () => {
+  initLenis();
   initScrollProgress();
   initNavbar();
+  initSmoothAnchorScroll();
   initTypewriter();
   initScrollSpy();
   initScrollReveal();
@@ -18,17 +22,74 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
+/* ------------------- 0. LENIS MOMENTUM SMOOTH SCROLL ------------------- */
+function initLenis() {
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 0.95,
+      touchMultiplier: 1.4,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+}
+
+/* ------------------- SMOOTH ANCHOR SCROLLING ------------------- */
+function initSmoothAnchorScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+
+      e.preventDefault();
+
+      if (lenis) {
+        lenis.scrollTo(targetElement, {
+          offset: -65,
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+      } else {
+        const navHeight = 70;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
+}
+
 /* ------------------- 1. SCROLL PROGRESS BAR ------------------- */
 function initScrollProgress() {
   const progressBar = document.getElementById('scroll-progress');
   if (!progressBar) return;
 
-  window.addEventListener('scroll', () => {
+  const updateProgress = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const progress = (scrollTop / scrollHeight) * 100;
     progressBar.style.width = `${progress}%`;
-  });
+  };
+
+  window.addEventListener('scroll', updateProgress);
+  if (lenis) {
+    lenis.on('scroll', updateProgress);
+  }
 }
 
 /* ------------------- 2. NAVBAR SCROLL & MOBILE MENU ------------------- */
@@ -53,6 +114,7 @@ function initNavbar() {
     navMenu?.classList.remove('open');
     menuOverlay?.classList.remove('active');
     document.body.classList.remove('menu-open');
+    if (lenis) lenis.start();
   };
 
   const openMenu = () => {
@@ -60,6 +122,7 @@ function initNavbar() {
     navMenu?.classList.add('open');
     menuOverlay?.classList.add('active');
     document.body.classList.add('menu-open');
+    if (lenis) lenis.stop();
   };
 
   if (menuToggle && navMenu) {
